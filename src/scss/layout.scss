@@ -1,0 +1,23 @@
+@import 'import/_variables';
+%center {
+    text-align: center;
+    line-height: 3;
+}
+
+header {
+    h1 {
+        @extend %center;
+    }
+}
+
+#timer,
+#controllers {
+    @extend %center;
+}
+
+#controllers {
+    .box {
+        display: inline-block;
+        width: $heightT;
+    }
+}

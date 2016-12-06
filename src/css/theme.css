@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+body {
+  font-family: "Open Sans", sans-serif; }
+
+header {
+  background: #EEEEEE; }
+  header h1 {
+    font-size: 2.3rem;
+    color: #424242;
+    font-weight: bold; }
+
+#timer {
+  font-size: 6rem;
+  color: #757575; }
+
+#controllers .box {
+  font-size: 1.2rem;
+  border: 0.1rem solid #B71C1C;
+  border-radius: 1.5rem;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  -ms-border-radius: 1.5rem; }

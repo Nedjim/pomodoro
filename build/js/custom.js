@@ -1,0 +1,2 @@
+"use strict";console.log("fichier js open");
+"use strict";function test(){console.log("click")}var box25=document.getElementsByClassName("box")[0],box15=document.getElementsByClassName("box")[1],box5=document.getElementsByClassName("box")[2];box25.addEventListener("click",test),box15.addEventListener("click",test),box5.addEventListener("click",test);
