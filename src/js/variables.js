@@ -1,19 +1,23 @@
-var box = document.getElementsByClassName("box");
+//Récupération des variables
 var timerMinute = document.getElementById("minute");
 var timerSec = document.getElementById("seconds");
 
-var min = 0;
-var sec = 0;
+//Variables temporaires
+var min, sec;
 var tmp;
-var time1, time2;
+var time1, time2; //setIntervale
+var state = false; //état du timer
 
+//Clear
 function clear() {
     if ((min == 0) && (sec == 0)) {
         clearInterval(time1);
         clearInterval(time2);
+        return;
     }
 }
 
+//Secondes
 function decrementeSec() {
     if (tmp != 0) {
         min--;
@@ -25,21 +29,33 @@ function decrementeSec() {
     clear();
 }
 
+//Minutes
 function decrementeMin() {
     sec = 60;
     min--;
     timerMinute.innerHTML = min;
 }
 
+//Initialisation
 function init() {
     timerMinute.innerHTML = min;
     sec = 60;
     tmp = min;
+    if (state == false) {
+        state = true;
+    } else {
+        clearInterval(time1);
+        clearInterval(time2);
+        sec = 60;
+        timerSec.innerHTML = "00";
+    }
     time1 = setInterval(decrementeSec, 1000);
     time2 = setInterval(decrementeMin, 61000);
 }
 
-function testClass(e) {
+//Menu
+function main(e) {
+
     var element = e.target.className;
 
     switch (element) {
@@ -50,7 +66,7 @@ function testClass(e) {
             min = 15;
             break;
         case "box 5":
-            min = 1; //mettre 5 min
+            min = 5;
             break;
         default:
             break;
@@ -58,4 +74,4 @@ function testClass(e) {
     init();
 }
 
-document.addEventListener("click", testClass);
+document.addEventListener("click", main);
