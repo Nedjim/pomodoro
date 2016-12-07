@@ -1,11 +1,32 @@
-var box25 = document.getElementsByClassName("box")[0];
-var box15 = document.getElementsByClassName("box")[1];
-var box5 = document.getElementsByClassName("box")[2];
+var box = document.getElementsByClassName("box");
 
-function test() {
-    console.log("click");
+var timerMinute = document.getElementById("minute");
+var timerSec = document.getElementById("seconds");
+
+var min = 0;
+var sec = 0;
+
+function init() {
+    timerMinute.innerHTML = min;
 }
 
-box25.addEventListener("click", test);
-box15.addEventListener("click", test);
-box5.addEventListener("click", test);
+function testClass(e) {
+    var element = e.target.className;
+
+    switch (element) {
+        case "box 25":
+            min = 25;
+            break;
+        case "box 15":
+            min = 15;
+            break;
+        case "box 5":
+            min = 5;
+            break;
+        default:
+            break;
+    }
+
+    init();
+}
+document.addEventListener("click", testClass);

@@ -1,2 +1,2 @@
-"use strict";console.log("fichier js open");
-"use strict";function test(){console.log("click")}var box25=document.getElementsByClassName("box")[0],box15=document.getElementsByClassName("box")[1],box5=document.getElementsByClassName("box")[2];box25.addEventListener("click",test),box15.addEventListener("click",test),box5.addEventListener("click",test);
+"use strict";
+"use strict";function init(){timerMinute.innerHTML=min}function testClass(e){var t=e.target.className;switch(t){case"box 25":min=25;break;case"box 15":min=15;break;case"box 5":min=5}init()}var box=document.getElementsByClassName("box"),timerMinute=document.getElementById("minute"),timerSec=document.getElementById("seconds"),min=0,sec=0;document.addEventListener("click",testClass);
