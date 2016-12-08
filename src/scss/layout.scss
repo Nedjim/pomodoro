@@ -11,13 +11,20 @@ header {
 }
 
 #timer,
-#controllers {
+.controllers {
     @extend %center;
 }
 
-#controllers {
+.box {
+    display: inline-block;
+    width: $heightT;
+    margin-right: $margin;
+}
+
+#boxPlay {
+    margin-top: $margin;
     .box {
-        display: inline-block;
-        width: $heightT;
+        width: 6rem;
+        height: 6rem;
     }
 }

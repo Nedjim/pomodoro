@@ -13,10 +13,26 @@ header {
   font-size: 6rem;
   color: #757575; }
 
-#controllers .box {
-  font-size: 1.2rem;
-  border: 0.1rem solid #B71C1C;
+.box {
+  font-size: 1.2rem; }
+
+#boxTime .box {
+  color: #EEEEEE;
+  background: #424242;
   border-radius: 1.5rem;
   -webkit-border-radius: 1.5rem;
   -moz-border-radius: 1.5rem;
   -ms-border-radius: 1.5rem; }
+
+#boxPlay .box:first-child {
+  background: #43A047; }
+
+#boxPlay .box:nth-child(2) {
+  background: #D32F2F; }
+
+#boxPlay .box {
+  color: #EEEEEE;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%; }

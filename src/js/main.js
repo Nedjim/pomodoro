@@ -19,3 +19,7 @@ function main(e) {
 }
 
 document.addEventListener("click", main);
+
+//1 - Choisir Start ou stop
+//2 - Si start : choisir le timing
+//3 - Faire des cycle avec 5 min de pauses
