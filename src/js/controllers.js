@@ -19,6 +19,8 @@ function printSec() {
 }
 //Secondes
 function decrementeSec() {
+    console.log("fonction decrSec -> Min = " + min);
+
     if (tmp == true) {
         min--;
         tmp = false;
@@ -32,23 +34,33 @@ function decrementeSec() {
 
 //Minutes
 function decrementeMin() {
-    sec = 60;
     min--;
     timerMinute.innerHTML = min;
 }
 
 //Initialisation
 function init() {
-    timerMinute.innerHTML = min;
-    tmp = true;
 
-    if (state == false) {
-        state = true;
+    console.log("Fonction init  : Min = " + min);
+
+    if (min != 0) {
+        timerMinute.innerHTML = min;
+        tmp = true;
+        console.log("tmp = " + tmp);
+
+        if (state == false) {
+            state = true;
+            console.log("State = " + state);
+        } else {
+            reboot();
+            sec = 60;
+            timerSec.innerHTML = "00";
+        }
+        console.log("True: min = " + min + ":" + sec);
+        time1 = setInterval(decrementeSec, 1000);
+        time2 = setInterval(decrementeMin, 61000);
+
     } else {
-        reboot();
-        sec = 60;
-        timerSec.innerHTML = "00";
+        console.log("Echec -> retourn dans le main");
     }
-    time1 = setInterval(decrementeSec, 1000);
-    time2 = setInterval(decrementeMin, 61000);
 }

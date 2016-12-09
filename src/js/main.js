@@ -1,4 +1,4 @@
-function main(e) {
+function menu(e) {
 
     var element = e.target.className;
 
@@ -13,13 +13,23 @@ function main(e) {
             min = 5;
             break;
         default:
-            return;
+            /* min = 0;*/
+            main();
     }
-    init();
+    if (min == 0) {
+        main();
+    } else {
+        notice.innerHTML = "Appuyez sur Start pour commencer";
+        //start.addEventListener("click", init);
+
+    }
 }
 
-document.addEventListener("click", main);
+function main() {
+    console.log("Main min = " + min);
+    notice.innerHTML = "Choisissez votre timing avant de commencer";
+    document.addEventListener("click", menu);
+    start.addEventListener("click", init);
+}
 
-//1 - Choisir Start ou stop
-//2 - Si start : choisir le timing
-//3 - Faire des cycle avec 5 min de pauses
+window.onload = main;
