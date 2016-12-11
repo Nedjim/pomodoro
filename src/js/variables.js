@@ -23,3 +23,5 @@ var sec = 60;
 var setTime;
 //état du timer -> true: start - false: stop
 var state = false;
+
+/*--------------------FORMULAIRE---------------------*/

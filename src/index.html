@@ -9,26 +9,34 @@
 <body>
 
     <header>
-        <h1>Pomodoro</h1>
+        <h1 class="center">Pomodoro</h1>
     </header>
-    <div id="boxPlay" class="controllers">
+    <div id="boxPlay" class="center">
         <div id="start" class="box">Start</div>
         <div id="pause" class="box">Pause</div>
         <div id="stop" class="box">Stop</div>
     </div>
 
-    <div id="timer">
+    <div id="timer" class="center">
         <span id="minute">00</span><span>:</span><span id="seconds">00</span>
     </div>
 
-    <div id="boxTime" class="controllers">
+    <div id="notice" class="notice center">
+        <p>Choisissez votre timing avant de commencer</p>
+    </div>
+
+    <div id="boxTime" class="center top">
         <span class="box 25">25 min</span>
         <span class="box 15">15 min</span>
         <span class="box 5">5min</span>
     </div>
-    <div id="notice">
-        Choisissez votre timing avant de commencer
+    <div id="notice" class="notice center top">
+        <p>Choisissez le nombre de cycle</p>
     </div>
+    <form id="formCycle" class="center bottom" name="formCycle">
+        <input type="text" name="cycle">
+        <input type="submit" name="cycle" value="valider">
+    </form>
 
     <script src="js/vendors.js"></script>
     <script src="js/custom.js"></script>

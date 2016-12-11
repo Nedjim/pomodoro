@@ -2,6 +2,7 @@ function pauseTimer() {
     document.removeEventListener("click", menu);
     state = false;
     clearInterval(setTime);
+    notice.innerHTML = "Appuyez sur Start pour reprendre";
 }
 
 function stopTimer() {
