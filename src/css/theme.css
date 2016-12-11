@@ -28,6 +28,9 @@ header {
   background: #43A047; }
 
 #boxPlay .box:nth-child(2) {
+  background: #9E9D24; }
+
+#boxPlay .box:nth-child(3) {
   background: #D32F2F; }
 
 #boxPlay .box {

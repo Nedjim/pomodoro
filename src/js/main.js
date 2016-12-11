@@ -1,31 +1,43 @@
-function menu(e) {
-
-    var element = e.target.className;
-
-    switch (element) {
-        case "box 25":
-            min = 25;
-            timerMinute.innerHTML = min;
-            break;
-        case "box 15":
-            min = 15;
-            timerMinute.innerHTML = min;
-            break;
-        case "box 5":
-            min = 1;
-            timerMinute.innerHTML = min;
-            break;
-        default:
-            main();
-    }
+function init(time) {
+    min = time;
+    timerMinute.innerHTML = min;
     notice.innerHTML = "Appuyez sur Start pour commencer";
 }
 
-function main() {
+function menu(e) {
+
+    var element = e.target.className;
     notice.innerHTML = "Choisissez votre timing avant de commencer";
+
+    switch (element) {
+        case "box 25":
+            init(25);
+            break;
+        case "box 15":
+            init(15);
+            break;
+        case "box 5":
+            init(5);
+            break;
+        default:
+            min = 0;
+            timerMinute.innerHTML = "00";
+            timerSec.innerHTML = "00";
+            start.removeEventListener("click", startTimer);
+            pause.removeEventListener("click", pauseTimer);
+            break;
+    }
+    main();
+}
+
+function main() {
+
     document.addEventListener("click", menu);
-    start.addEventListener("click", startTimer);
-    pause.addEventListener("click", pauseTimer);
+    if (min != 0) {
+        start.addEventListener("click", startTimer);
+        pause.addEventListener("click", pauseTimer);
+        stop.addEventListener("click", stopTimer);
+    }
 }
 
 window.onload = main;

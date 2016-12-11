@@ -1,14 +1,14 @@
-function stopTimer() {
+function pauseTimer() {
+    document.removeEventListener("click", menu);
     state = false;
     clearInterval(setTime);
-    main();
 }
 
-function pauseTimer() {
-    if (state = true) {
-        state = false;
-        clearInterval(setTime);
-    }
+function stopTimer() {
+    min = 0;
+    sec = 60;
+    pauseTimer();
+    main();
 }
 
 function decrMin() {
@@ -20,14 +20,12 @@ function decrSec() {
     sec--;
     timerSec.innerHTML = sec;
     if (min == 0 && sec == 0) {
-        stopTimer();
+        pauseTimer();
+        main();
     }
 }
 
 function timer() {
-    if (state == false) {
-        state = true;
-    }
 
     switch (sec) {
 
@@ -47,6 +45,11 @@ function timer() {
 }
 
 function startTimer() {
+    document.removeEventListener("click", menu);
+    notice.innerHTML = " ";
     timerMinute.innerHTML = min;
-    setTime = setInterval(timer, 1000);
+    if (state == false) {
+        state = true;
+        setTime = setInterval(timer, 1000);
+    }
 }
