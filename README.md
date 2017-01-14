@@ -11,3 +11,6 @@
 ```
 $ npm install
 ```
+
+## 3- Amélioration
+    Ajout du cycle et du temps de pause
