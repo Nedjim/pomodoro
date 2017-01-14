@@ -19,3 +19,6 @@
   #boxPlay .box {
     width: 6rem;
     height: 6rem; }
+
+#boxForm {
+  display: visible; }

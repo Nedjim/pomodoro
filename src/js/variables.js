@@ -12,7 +12,8 @@ var notice = document.getElementById("notice");
 var timerMinute = document.getElementById("minute");
 //box contenant les secondes
 var timerSec = document.getElementById("seconds");
-
+//formulaire
+var boxForm = document.getElementById("boxForm");
 /*------------------TEMPORAIRES----------------------*/
 /*---------------------------------------------------*/
 //temporaires contenant le nombre de minutes
@@ -25,3 +26,4 @@ var setTime;
 var state = false;
 
 /*--------------------FORMULAIRE---------------------*/
+//var submitCycle = document.getElementById("formCycle");

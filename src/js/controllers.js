@@ -29,7 +29,6 @@ function decrSec() {
 function timer() {
 
     switch (sec) {
-
         case 1:
             decrSec();
             timerMinute.innerHTML = min;

@@ -1,6 +1,8 @@
 function init(time) {
     min = time;
     timerMinute.innerHTML = min;
+    console.log("yes");
+    boxForm.style.display = "visible";
     notice.innerHTML = "Appuyez sur Start pour commencer";
 }
 
@@ -27,12 +29,14 @@ function menu(e) {
             pause.removeEventListener("click", pauseTimer);
             break;
     }
+    //cycle.style.display = "none";
     main();
 }
 
 function main() {
 
     document.addEventListener("click", menu);
+
     if (min != 0) {
         start.addEventListener("click", startTimer);
         pause.addEventListener("click", pauseTimer);

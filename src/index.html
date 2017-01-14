@@ -30,13 +30,15 @@
         <span class="box 15">15 min</span>
         <span class="box 5">5min</span>
     </div>
-    <div id="notice" class="notice center top">
-        <p>Choisissez le nombre de cycle</p>
+    <div id="boxForm" class="notice center top">
+        <form action="ajax/cycle.php" method="POST" id="formCycle" name="formCycle" class="center bottom">
+            <p>Choisissez le nombre de cycle</p>
+            <input type="text" name="number" id="number">
+            <p>Choisissez le temps de pause (minutes)</p>
+            <input type="text" name="pauseTime" id="numberpauseTime">
+            <input type="submit" name="validation" id="validation" value="valider">
+        </form>
     </div>
-    <form id="formCycle" class="center bottom" name="formCycle">
-        <input type="text" name="cycle">
-        <input type="submit" name="cycle" value="valider">
-    </form>
 
     <script src="js/vendors.js"></script>
     <script src="js/custom.js"></script>
