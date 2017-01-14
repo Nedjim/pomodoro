@@ -5,6 +5,7 @@
 - Jquery
 - gulp
 - Sass
+- Ajax
 
 ## 2- Installation
 ```
